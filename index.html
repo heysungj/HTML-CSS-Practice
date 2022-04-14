@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国发展历史网页</title>
+    <meta 
+        name="description"
+        content="此网站介绍过去中国几十年经济发展相关政策"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- head icon -->
+    <link rel="bookmark" href="./china.png">
+    <link rel="shortcut icon" href="./china.png">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'GDP'],
+            ["1979", 4062.6],
+            ["1985", 9016],
+            ["1990", 18667.8],
+            ["1995", 60793.7],
+            ["2000", 99214.6],
+            ["2005", 184937.4],
+            ["2010", 401202],
+            ["2015", 685992],
+            ["2020", 1013567]
+        ]);
+
+        var options = {
+          title: '过去中国40年GDP变化图',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./twicon/twicon.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <h1 class="headerTtile"><i class="twicon-lantern1"></i> 中国经济发展历史</h1>
+        <h3 class="headerText">过去70年中国经济发展的历史以及相关政策</h3>
+    </header>
+    <!-- nav -->
+    <nav>
+        <ul>
+            <li>
+                <a class="active" href="./index.html"><i class="twicon-lantern1"></i> 首页</a>
+            </li>
+            <li>
+                <a href="./agriculture.html"><i class="twicon-dragon-boat"></i> 农业改革</a>
+            </li>
+            <li>
+                <a href="./manufacture.html"><i class="twicon-president-office"></i> 工业改革</a>
+            </li>
+            <li>
+                <a href="./economy.html"><i class="twicon-taiwan-rw"></i> 经济起飞</a>
+            </li>
+            <li>
+                <a href="./abouMe.html"><i class="twicon-slipper"></i> 关于作者</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- main content -->
+    <main>
+        <section class="left">
+            <p>
+                中国历史源自黄河流域，约在商、周时期，中国进入以农业为主的经济。春秋战国的法家认为农业是本业，工商是末业，提出了重本抑末，也就是重农抑商的政策，自此一直到近代，中国经济主体一直都是农业。
+            </p>
+            <br />
+            <p>
+                1978年,邓小平提出中国大陆实行改革开放政策后,经济体制由旧有的不适应经济进一步发展的的苏联式计划经济体制逐步转向以市场为导向的经济体制，政府对经济依然有某种程度上的主导作用，与日韩模式相似。在这种改革下，在农村实现了第二次土地改革，以家庭联产承包责任制逐渐取代了农业合作社，工业企业中的企业领导层拥有更大的自主权，国有企业逐渐成为独立核算的市场主体，允许私人经营服务业以及轻工业，并打开国门，大量引进外资。这种经济体制在1992年后被中国政府称为“中国特色的社会主义市场经济体制”。
+                经过改革开放40年的发展,中国大陆经济规模迅速扩大，年均增长率近10%,是世界上经济增长速度最快的国家。从2010年起，中国GDP总量超过日本，居世界第二。经济高速增长亦对中国政治产生影响，中国民众可能因经济差距“投向西方的怀抱”的担忧消解，同时帮助新民族主义崛起，对中国共产党和中国政府的政治认同得以巩固
+            </p>
+            <div id="curve_chart" ></div>
+        </section>
+        <section class="right">
+            <h4>你知道中国在哪里吗?</h4>
+            <p>
+                中国位于亚洲东部、太平洋西岸。国土面积约960万平方公里，仅次于俄罗斯和加拿大位居世界第三/四位。其中陆地面积为世界第二，仅次于俄罗斯。
+            </p>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26951828.924054436!2d86.05428755035679!3d34.451686410470906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31508e64e5c642c1%3A0x951daa7c349f366f!2sChina!5e0!3m2!1sen!2sus!4v1649792359517!5m2!1sen!2sus" 
+                width="200" 
+                height="200" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+        </section>
+    </main>
+</body>
+</html>
